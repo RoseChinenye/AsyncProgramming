@@ -1,12 +1,15 @@
-﻿namespace AsyncProgramming
-{
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Let's learn Async Programming!");
+﻿using static AsyncProgramming.usingThread;
 
-            Console.ReadKey();
-        }
+namespace AsyncProgramming;
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Let's learn Async Programming!");
+
+
+        ExtractExecutingThread();
+        Console.ReadKey();
     }
 }
