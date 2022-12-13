@@ -1,4 +1,5 @@
 ﻿using static AsyncProgramming.usingThread;
+using static AsyncProgramming.processes;
 
 namespace AsyncProgramming;
 
@@ -6,10 +7,9 @@ public class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Let's learn Async Programming!");
-
-
-        ExtractExecutingThread();
+       
+        //ExtractExecutingThread();
+        EnumeratingProcesses();
         Console.ReadKey();
     }
 }
