@@ -9,12 +9,15 @@ namespace AsyncProgramming
             var runningProcesses = from proc in Process.GetProcesses()
                                    orderby proc.Id
                                    select proc;
-            foreach (var proc in runningProcesses)
+
+            foreach (var p in runningProcesses)
             {
-                string info = $"-> PID: {proc.Id}\tName: {proc.ProcessName}";
+                string info = $"-> PID: {p.Id}\tName: {p.ProcessName}";
                 Console.WriteLine(info);
             }
             Console.WriteLine("************\n");
         }
+
+       
     }
 }
