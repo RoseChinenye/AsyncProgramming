@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace AsyncProgramming;
+﻿namespace AsyncProgramming;
 
 // These classes are intentionally empty for the purpose of this example. They are simply marker classes
 // for the purpose of demonstration, contain no properties, and serve no other purpose.
@@ -26,20 +23,20 @@ public static class syncExample
     public static void ApplyButter(Toast toast) =>
         Console.WriteLine("Putting butter on the toast");
 
-    public static Toast ToastBread(int slices)
+   public static async Task<Toast> ToastBreadAsync(int slices)
     {
         for (int slice = 0; slice < slices; slice++)
         {
             Console.WriteLine("Putting a slice of bread in the toaster");
         }
         Console.WriteLine("Start toasting...");
-        Task.Delay(3000).Wait();
+        Task.Delay(3000).Wait(); 
         Console.WriteLine("Remove toast from toaster");
 
-        return new Toast();
+        return new Toast(); 
     }
 
-    public static Bacon FryBacon(int slices)
+    public static async Task<Bacon> FryBaconAsync(int slices)
     {
         Console.WriteLine($"putting {slices} slices of bacon in the pan");
         Console.WriteLine("cooking first side of bacon...");
@@ -55,7 +52,7 @@ public static class syncExample
         return new Bacon();
     }
 
-    public static Egg FryEggs(int howMany)
+    public static async Task<Egg> FryEggsAsync(int howMany)
     {
         Console.WriteLine("Warming the egg pan...");
         Task.Delay(3000).Wait();
